@@ -1,0 +1,40 @@
+/* ===== MAIN LAYOUT STRUCTURE ===== */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Main Content takes remaining space */
+#main-content-container {
+    flex: 1;
+}
+
+/* Sidebar and Details Panel are fixed width */
+#sidebar-container {
+    width: 256px;
+}
+
+#details-panel-container {
+    width: 400px;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    #sidebar-container {
+        display: none;
+    }
+}
+
+@media (max-width: 1279px) {
+    #details-panel-container {
+        display: none;
+    }
+}

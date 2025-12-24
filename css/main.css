@@ -1,0 +1,11 @@
+/* ===== MAIN CSS FILE - IMPORTS EVERYTHING ===== */
+
+/* Import base styles */
+@import url('base.css');
+@import url('layout.css');
+
+/* Import component styles */
+@import url('components/sidebar.css');
+@import url('components/main-content.css');
+@import url('components/details-panel.css');
+@import url('components/header.css');

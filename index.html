@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-layout">
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    
+                    <!-- Filters Section -->
+                    <div class="filters-section">
+                        <h3 class="sidebar-section-title">Filters</h3>
+                        <nav class="filters-nav">
+                            <a href="#" class="filter-link active" aria-current="page">
+                                <span class="material-symbols-outlined filter-icon">wb_sunny</span>
+                                My Day
+                                <span class="filter-count">4</span>
+                            </a>
+                            <a href="#" class="filter-link">
+                                <span class="material-symbols-outlined filter-icon pink">calendar_month</span>
+                                Next 7 Days
+                            </a>
+                            <a href="#" class="filter-link">
+                                <span class="material-symbols-outlined filter-icon emerald">all_inclusive</span>
+                                All Tasks
+                                <span class="filter-count">12</span>
+                            </a>
+                        </nav>
+                    </div>
+                    
+                    <!-- Lists Section -->
+                    <div class="lists-section">
+                        <div class="lists-header">
+                            <h3 class="sidebar-section-title">My Lists</h3>
+                            <button class="add-list-btn" aria-label="Add new list">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <nav class="lists-nav">
+                            <a href="#" class="list-link">
+                                <span class="material-symbols-outlined list-icon">list</span>
+                                Personal
+                            </a>
+                            <a href="#" class="list-link">
+                                <span class="material-symbols-outlined list-icon purple">work</span>
+                                Work Projects
+                                <span class="list-count">3</span>
+                            </a>
+                            <a href="#" class="list-link">
+                                <span class="material-symbols-outlined list-icon orange">shopping_cart</span>
+                                Groceries
+                            </a>
+                        </nav>
+                    </div>
+                    
+                </div>
+                
+                <!-- Sidebar Footer -->
+                <div class="sidebar-footer">
+                    <button class="create-list-btn" type="button">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        Create New List
+                    </button>
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="content-wrapper">
+                    
+                    <!-- Header Section -->
+                    <div class="header-section">
+                        <div class="header-content">
+                            <div class="header-left">
+                                <h1 class="page-title">My Day</h1>
+                                <p class="page-date">
+                                    <span class="material-symbols-outlined date-icon">calendar_today</span>
+                                    Wednesday, Oct 25
+                                </p>
+                            </div>
+                            <div class="header-right">
+                                <button class="more-btn" aria-label="More options">
+                                    <span class="material-symbols-outlined">more_horiz</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add Task Form -->
+                    <div class="add-task-container">
+                        <div class="add-task-card">
+                            <span class="material-symbols-outlined add-icon" aria-hidden="true">add</span>
+                            <input 
+                                type="text" 
+                                class="add-task-input" 
+                                placeholder="Add new task"
+                                aria-label="Add new task"
+                            />
+                            <button class="add-task-btn" type="button">Add Task</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Today's Tasks -->
+                    <div class="tasks-section">
+                        <div class="section-header">
+                            <span class="material-symbols-outlined expand-icon">expand_more</span>
+                            <h2 class="section-title">Today</h2>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="tasks-list">
+                            <div class="task-card">
+                                <div class="drag-handle">
+                                    <span class="material-symbols-outlined">drag_indicator</span>
+                                </div>
+                                <input type="checkbox" class="task-checkbox" id="task1">
+                                <div class="task-content">
+                                    <p class="task-title">Review Q3 design system updates</p>
+                                    <div class="task-meta">
+                                        <span class="task-time">
+                                            <span class="material-symbols-outlined">schedule</span>
+                                            2:00 PM
+                                        </span>
+                                        <span class="task-category">
+                                            <span class="material-symbols-outlined">folder</span>
+                                            Work
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="task-actions">
+                                    <button class="action-btn edit-btn" title="Edit task">
+                                        <span class="material-symbols-outlined">edit</span>
+                                    </button>
+                                    <button class="action-btn delete-btn" title="Delete task">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="task-card priority">
+                                <div class="drag-handle">
+                                    <span class="material-symbols-outlined">drag_indicator</span>
+                                </div>
+                                <input type="checkbox" class="task-checkbox" id="task2">
+                                <div class="task-content">
+                                    <p class="task-title">Call John regarding the new API integration</p>
+                                    <div class="task-meta">
+                                        <span class="task-priority">
+                                            <span class="material-symbols-outlined">flag</span>
+                                            High Priority
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="task-actions">
+                                    <button class="action-btn edit-btn" title="Edit task">
+                                        <span class="material-symbols-outlined">edit</span>
+                                    </button>
+                                    <button class="action-btn delete-btn" title="Delete task">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tomorrow's Tasks -->
+                    <div class="tasks-section">
+                        <div class="section-header">
+                            <span class="material-symbols-outlined expand-icon">expand_more</span>
+                            <h2 class="section-title">Tomorrow</h2>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="tasks-list">
+                            <div class="task-card">
+                                <div class="drag-handle">
+                                    <span class="material-symbols-outlined">drag_indicator</span>
+                                </div>
+                                <input type="checkbox" class="task-checkbox" id="task3">
+                                <div class="task-content">
+                                    <p class="task-title">Grocery shopping for the weekend</p>
+                                    <div class="task-meta">
+                                        <span class="task-category">
+                                            <span class="material-symbols-outlined">shopping_cart</span>
+                                            Groceries
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="task-actions">
+                                    <button class="action-btn edit-btn" title="Edit task">
+                                        <span class="material-symbols-outlined">edit</span>
+                                    </button>
+                                    <button class="action-btn delete-btn" title="Delete task">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="task-card completed">
+                                <div class="drag-handle">
+                                    <span class="material-symbols-outlined">drag_indicator</span>
+                                </div>
+                                <input type="checkbox" class="task-checkbox" id="task4" checked>
+                                <div class="task-content">
+                                    <p class="task-title">Email marketing team</p>
+                                </div>
+                                <div class="task-actions">
+                                    <button class="action-btn delete-btn" title="Delete task">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </main>
+            
+            <!-- Details Panel -->
+            <aside class="details-panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span class="material-symbols-outlined">folder</span>
+                        Work
+                    </div>
+                    <div class="panel-actions">
+                        <button class="panel-action-btn" aria-label="Delete list">
+                            <span class="material-symbols-outlined">delete</span>
+                        </button>
+                        <button class="panel-action-btn" aria-label="Close panel">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-content">
+                    <div class="task-title-edit">
+                        <input type="checkbox" class="title-checkbox" id="details-task">
+                        <textarea class="title-input" rows="2">Review Q3 design system updates</textarea>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn">
+                            <span class="material-symbols-outlined">event</span>
+                            Today
+                        </button>
+                        <button class="quick-action-btn">
+                            <span class="material-symbols-outlined">notifications</span>
+                            Remind me
+                        </button>
+                        <button class="quick-action-btn full-width">
+                            <span class="material-symbols-outlined">sell</span>
+                            Add Tags...
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <p class="footer-text">Created 2 hours ago</p>
+                </div>
+            </aside>
+            
+        </div>
+    </div>
+</body>
+</html>

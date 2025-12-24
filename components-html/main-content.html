@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main-content</title>
+</head>
+<body>
+    <!-- MAIN CONTENT AREA - Where all tasks are displayed -->
+<div class="main-content">
+    <div class="content-wrapper">
+         <!-- ===== HEADER SECTION ===== -->
+        <!-- Contains page title, date, and actions -->
+        <div class="header-section">
+    <div class="header-content">
+        <div class="header-left">
+            <h1 class="page-title">My Day</h1>
+            <p class="page-date">
+                <span class="material-symbols-outlined date-icon">calendar_today</span>
+            <!-- Dynamic Date - Would be JavaScript in real app -->
+                Wednesday, Oct 25
+            </p>
+        </div>
+        <div class="header-right">
+            <button class="more-btn">
+              <!-- Three Dots Icon -->
+                <span class="material-symbols-outlined">more_horiz</span>
+            </button>
+        </div>
+    </div>
+</div>
+        <!-- ===== ADD TASK FORM SECTION ===== -->
+        <!-- Container for the new task input form -->
+        <div class="add-task-container">
+            <div class="add-task-card"> 
+                <!-- Add Icon -->
+                <span class="material-symbols-outlined add-icon" aria-hidden="true">
+                    add
+                </span>
+                <!-- Task Input Field -->
+                <input 
+                    type="text" 
+                    class="add-task-input"    
+                    aria-label="Add new task"
+                />
+    
+                <!-- Add Task Button -->
+                <button class="add-task-btn" type="button">
+                    Add Task
+                </button> 
+            </div>  
+        </div> 
+    </div>
+</div>
+
+    
+</body>
+</html>
