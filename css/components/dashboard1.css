@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+* {
+  margin: 0;
+  box-sizing: border-box; 
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-family: "Inter", "sans-serif";
+  padding-right: 24px;
+  padding-left: 24px;
+
+}
+
+/* nav-bar */
+.logo-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.login-signup:hover {
+  cursor: pointer;
+}
+.fa-moon {
+  border-radius: 50%;
+  padding: 10px 10px;
+  transition: all 0.3s ease;
+}
+.fa-moon:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+.nav-bar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.primary-btn {
+    background-color: #135bec;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.secondary-btn {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.free {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #64748b; 
+  margin-top: 8px;
+}
+.badgeIcon{
+  font-family: 'Material Symbols Outlined';
+  font-size: 18px;
+  color: #22c55e;
+}
+/* @media (min-width: 780px) {
+  .nav-bar {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+} */
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.signup-btn {
+  background-color: #135bec;
+  color: white;
+}
+.signup-btn:hover {
+  background-color: #003aadff;
+  opacity: 0.7;
+  opacity: 110%;
+}
+
+.material-symbols-outlined {
+  display: none !important;
+}
+@media (max-width: 780px) {
+  .login-signup button {
+    display: none;
+  }
+  .material-symbols-outlined {
+    display: block !important;
+  }
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  gap: 4rem; 
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+  padding: 12rem 1.5rem 6rem 1.5rem; 
+}
+
+@media (max-width: 1024px){
+  .hero{
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  }
+}
+
+/* content div */
+.conent{
+  display: flex; 
+  flex-direction: column; 
+  min-width: 50%; 
+  gap: 1.5rem; 
+  justify-content: flex-start; 
+}
+
+.upper-content{
+  display: flex;
+  flex-direction: column;   
+  gap: 1rem; 
+  font
+}
+.upper-content h1{
+  font-size: 3.75rem; 
+  font-weight: 900; 
+}
+.upper-content h2{
+  color: #64748b; 
+  font-size: 1.125rem; 
+  font-weight: 300; 
+}
+
+/* img div */
+ .column {
+      width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      .column {
+        width: 100%;
+      }
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      background: #f8fafc;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.7s ease;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.05);
+    }
+
+
+    .floating-card {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+      max-width: 240px;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      animation: bounce 3s infinite;
+    }
+
+    
+
+    @media (min-width: 640px) {
+      .floating-card {
+        display: flex;
+      }
+    }
+
+    .task {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .task.done span {
+      text-decoration: line-through;
+      color: #9ca3af;
+    }
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #3b82f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .buttons{
+      padding-top: 0.5rem; 
+      display: flex; 
+      gap: 1rem; 
+    }
