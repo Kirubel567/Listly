@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskMaster Dashboard</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0..200" rel="stylesheet" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -164,15 +162,16 @@
         <!-- Details Panel -->
         <aside class="details-panel">
           <div class="panel-header">
-            <div class="panel-title">
-              <span class="material-symbols-outlined">folder</span>
+            <div class="folder-info">
+              <span class="material-symbols-outlined icon-folder">folder</span>
               Work
             </div>
-            <div class="panel-actions">
-              <button class="panel-action-btn" aria-label="Delete list">
+
+            <div class="action-group">
+              <button class="btn-action btn-delete" aria-label="Delete">
                 <span class="material-symbols-outlined">delete</span>
               </button>
-              <button class="panel-action-btn" aria-label="Close panel">
+              <button class="btn-action btn-close" aria-label="Close">
                 <span class="material-symbols-outlined">close</span>
               </button>
             </div>
@@ -198,12 +197,30 @@ Review Q3 design system updates</textarea
                 Add Tags...
               </button>
             </div>
+            <div class="notes-container">
+              <h4 class="notes-title">
+                <span class="material-symbols-outlined icon-gray"
+                  >description</span
+                >
+                Notes
+              </h4>
+
+              <textarea
+                class="notes-textarea"
+                placeholder="Add details here..."
+              ></textarea>
+            </div>
           </div>
+
           <div class="panel-footer">
             <p class="footer-text">Created 2 hours ago</p>
           </div>
         </aside>
       </div>
     </div>
+    
+    <script src="js/api.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

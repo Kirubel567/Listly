@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Review Q3 design system and stuff",
+      "description": "Ensure all components match the new brand guidelines.",
+      "category": "Work",
+      "dueDate": "2025-10-25",
+      "completed": false,
+      "priority": "high"
+    }, 
+    {
+      "id": "2",
+      "title": "second task",
+      "description": "Ensure all components match the new brand guidelines.",
+      "category": "man",
+      "dueDate": "2025-10-25",
+      "completed": false, 
+      "priority": "high"
+    }
+  ]
+}

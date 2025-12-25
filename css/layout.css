@@ -32,10 +32,10 @@
     #sidebar-container {
         display: none;
     }
-}
+} */
 
 @media (max-width: 1279px) {
     #details-panel-container {
-        display: none;
+        display: block;
     }
 }

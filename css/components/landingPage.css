@@ -123,7 +123,7 @@ nav h1 {
   opacity: 110%;
 }
 
-.material-symbols-outlined {
+.hamberguer {
   display: none !important;
 }
 @media (max-width: 780px) {
