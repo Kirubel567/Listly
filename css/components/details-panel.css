@@ -16,12 +16,6 @@ body.dark .details-panel {
   border-color: var(--border-dark);
 }
 
-/* @media (min-width: 1280px) {
-  .details-panel {
-    display: flex;
-  }
-} */
-
 /* ===== PANEL HEADER ===== */
 .panel-header {
   padding: 1.5rem;
@@ -93,7 +87,7 @@ body.dark .panel-action-btn:hover {
   font-size: 1.125rem;
 }
 
-/* ===== PANEL CONTENT ===== */
+/*  PANEL CONTENT */
 .panel-content {
   flex: 1;
   overflow-y: auto;

@@ -1,270 +1,291 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* 1. Global Reset & Transitions */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box; 
 }
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
-body {
-  font-family: "Inter", "sans-serif";
-  padding-right: 24px;
-  padding-left: 24px;
 
+body {
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
 }
 
-/* nav-bar */
+/* Dark Mode Global State */
+body.dark {
+  background-color: #0f172a; /* Deep Navy */
+  color: #f8fafc;
+}
+
+/* 2. Navigation Bar */
+.nav-bar {
+  position: fixed;
+  z-index: 1000; 
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Nav-bar Override */
+body.dark .nav-bar {
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e293b;
+}
+
 .logo-check {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
 }
+
 nav h1 {
-  margin: 0;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .login-signup {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
-.login-signup:hover {
+
+/* Theme Toggle Icon (Moon/Sun) */
+.fa-moon, .fa-sun {
+  font-size: 1.25rem;
+  padding: 8px;
   cursor: pointer;
-}
-.fa-moon {
   border-radius: 50%;
-  padding: 10px 10px;
   transition: all 0.3s ease;
 }
-.fa-moon:hover {
+
+.fa-moon:hover, .fa-sun:hover {
   background-color: rgba(128, 128, 128, 0.1);
 }
-.nav-bar {
-  position: fixed;
-  z-index: 100; 
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  font-weight: 700;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
-  background-color: white; 
-  opacity: 1; 
-}
-.primary-btn {
-    background-color: #135bec;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-.secondary-btn {
-    border: 1px solid #e2e8f0;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    background: white;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
+
+body.dark .fa-sun {
+  color: #f1c40f; /* Yellow Sun */
 }
 
-.free {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #64748b; 
-  margin-top: 8px;
-}
-.badgeIcon{
-  font-family: 'Material Symbols Outlined';
-  font-size: 18px;
-  color: #22c55e;
-}
-/* @media (min-width: 780px) {
-  .nav-bar {
-    padding-right: 10rem;
-    padding-left: 10rem;
-  }
-} */
-
+/* 3. Buttons */
 .btn {
   border: none;
   padding: 10px 20px;
   background-color: transparent;
   font-weight: 700;
   font-size: 0.875rem;
-  transition: all 0.3s ease;
-  border-radius: 10px;
-}
-.btn:hover {
   cursor: pointer;
-  background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.signup-btn {
+.login-btn {
+  color: #475569;
+}
+
+body.dark .login-btn {
+  color: #f8fafc;
+}
+
+.signup-btn, .primary-btn {
   background-color: #135bec;
   color: white;
 }
-.signup-btn:hover {
-  background-color: #003aadff;
-  opacity: 0.7;
-  opacity: 110%;
+
+.signup-btn:hover, .primary-btn:hover {
+  background-color: #003aad;
+}
+.primary-btn {
+  background-color: #135bec;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-size: 1rem;
+}
+.secondary-btn {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.hamberguer {
-  display: none !important;
-}
-@media (max-width: 780px) {
-  .login-signup button {
-    display: none;
-  }
-  .material-symbols-outlined {
-    display: block !important;
-  }
+body.dark .secondary-btn {
+  background: #1e293b;
+  color: white;
+  border-color: #334155;
 }
 
-/* hero section */
+/* 4. Hero Section */
 .hero {
   display: flex;
   gap: 4rem; 
-  padding-top: 7rem;
-  padding-bottom: 6rem;
-  padding: 12rem 1.5rem 6rem 1.5rem; 
+  padding: 10rem 1.5rem 6rem 1.5rem; 
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1024px){
-  .hero{
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+.conent {
+  display: flex; 
+  flex-direction: column; 
+  flex: 1;
+  gap: 2rem; 
+}
+
+.upper-content h1 {
+  font-size: 3.5rem; 
+  font-weight: 900; 
+  line-height: 1.1;
+}
+
+.upper-content h2 {
+  color: #64748b; 
+  font-size: 1.25rem; 
+  font-weight: 400; 
+}
+
+body.dark .upper-content h2 {
+  color: #94a3b8;
+}
+
+.buttons {
+  display: flex; 
+  gap: 1rem; 
+}
+
+.free {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #64748b; 
+}
+
+body.dark .free {
+  color: #94a3b8;
+}
+
+/* 5. Interactive Cards */
+.column {
+  flex: 1;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  background: #f8fafc;
+}
+
+body.dark .card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.floating-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: float 4s ease-in-out infinite;
+}
+
+body.dark .floating-card {
+  background: #1e293b;
+  color: white;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* 6. Animations & Responsiveness */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 8rem;
+    text-align: center;
+  }
+  .buttons, .logo-check, .free {
+    justify-content: center;
+  }
+  .upper-content h1 {
+    font-size: 2.5rem;
   }
 }
 
-/* content div */
-.conent{
-  display: flex; 
-  flex-direction: column; 
-  min-width: 50%; 
-  gap: 1.5rem; 
-  justify-content: flex-start; 
+.hamberguer {
+  display: none;
+  cursor: pointer;
 }
 
-.upper-content{
-  display: flex;
-  flex-direction: column;   
-  gap: 1rem; 
+@media (max-width: 780px) {
+  .login-btn, .signup-btn {
+    display: none;
+  }
+  .hamberguer {
+    display: block !important;
+  }
 }
-.upper-content h1{
-  font-size: 3.75rem; 
-  font-weight: 900; 
-}
-.upper-content h2{
-  color: #64748b; 
-  font-size: 1.125rem; 
-  font-weight: 300; 
-}
-
-/* img div */
- .column {
-      width: 100%;
-    }
-
-    @media (min-width: 1024px) {
-      .column {
-        width: 100%;
-      }
-    }
-
-    .card {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-      background: #f8fafc;
-    }
-
-    .card-image {
-      width: 100%;
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      transition: transform 0.7s ease;
-    }
-
-    .card:hover .card-image {
-      transform: scale(1.05);
-    }
-
-
-    .floating-card {
-      position: absolute;
-      bottom: 24px;
-      right: 24px;
-      background: white;
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 10px 15px rgba(0,0,0,0.15);
-      max-width: 240px;
-      display: none;
-      flex-direction: column;
-      gap: 12px;
-      animation: bounce 3s infinite;
-    }
-
-    
-
-    @media (min-width: 640px) {
-      .floating-card {
-        display: flex;
-      }
-    }
-
-    .task {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      color: #111827;
-    }
-
-    .task.done span {
-      text-decoration: line-through;
-      color: #9ca3af;
-    }
-
-    .checkbox {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid #3b82f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .buttons{
-      padding-top: 0.5rem; 
-      display: flex; 
-      gap: 1rem; 
-    }
