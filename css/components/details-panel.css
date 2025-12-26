@@ -304,7 +304,7 @@ body.dark .footer-text {
   }
 }
 
-//the side pannel header
+
 :root {
   --primary-color: #3b82f6; /* Adjust this to match your theme's primary color */
 }
@@ -531,7 +531,7 @@ body.dark .tag-input.notes-textarea:focus {
 }
 
 .search-input:focus {
-  ring: 2px solid rgba(19, 91, 236, 0.5); 
+  box-shadow: 2px solid rgba(19, 91, 236, 0.5); 
   background-color: #ffffff;
 }
 
