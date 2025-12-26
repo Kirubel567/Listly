@@ -16,11 +16,11 @@ body.dark .details-panel {
   border-color: var(--border-dark);
 }
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .details-panel {
     display: flex;
   }
-}
+} */
 
 /* ===== PANEL HEADER ===== */
 .panel-header {
@@ -376,4 +376,117 @@ body.dark .footer-text {
   .btn-action:hover {
     background-color: #1f2937; /* dark:hover:bg-gray-800 */
   }
+}
+
+.deadline-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deadline-input {
+  border: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-secondary-light);
+  outline: none;
+  cursor: pointer;
+}
+
+body.dark .deadline-input {
+  color: var(--text-secondary-dark);
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-column: span 2;
+}
+
+.current-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  background: #e2e8f0;
+  color: #475569;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag-pill span {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tag-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+/* Container styling to match the section layout */
+.notes-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label styling */
+.notes-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary-light); /* Adjust based on your variables */
+}
+
+/* The Tag Input field itself */
+.tag-input.notes-textarea {
+  border: 1px solid transparent; /* Keeps it clean until focus */
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #1e293b;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Hover and Focus states to match a modern UI */
+.tag-input.notes-textarea:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.tag-input.notes-textarea:focus {
+  background-color: #f8fafc;
+  border-color: #e2e8f0;
+  outline: none;
+}
+
+/* --- Dark Mode Support --- */
+body.dark .tag-input.notes-textarea {
+  color: #f1f5f9;
+}
+
+body.dark .tag-input.notes-textarea:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.dark .tag-input.notes-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #334155;
 }
