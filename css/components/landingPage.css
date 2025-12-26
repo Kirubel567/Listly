@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-/* 1. Global Reset & Transitions */
+/* Global Reset & Transitions */
 * {
   margin: 0;
   padding: 0;
@@ -22,11 +22,11 @@ body {
 
 /* Dark Mode Global State */
 body.dark {
-  background-color: #0f172a; /* Deep Navy */
+  background-color: #0f172a; 
   color: #f8fafc;
 }
 
-/* 2. Navigation Bar */
+/*  Navigation Bar */
 .nav-bar {
   position: fixed;
   z-index: 1000; 
@@ -42,7 +42,7 @@ body.dark {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Dark Mode Nav-bar Override */
+
 body.dark .nav-bar {
   background-color: #0f172a;
   border-bottom: 1px solid #1e293b;
@@ -79,10 +79,10 @@ nav h1 {
 }
 
 body.dark .fa-sun {
-  color: #f1c40f; /* Yellow Sun */
+  color: #f1c40f; 
 }
 
-/* 3. Buttons */
+/*  Buttons */
 .btn {
   border: none;
   padding: 10px 20px;
@@ -139,7 +139,7 @@ body.dark .secondary-btn {
   border-color: #334155;
 }
 
-/* 4. Hero Section */
+/* Hero Section */
 .hero {
   display: flex;
   gap: 4rem; 
@@ -188,7 +188,7 @@ body.dark .free {
   color: #94a3b8;
 }
 
-/* 5. Interactive Cards */
+/* Interactive Cards */
 .column {
   flex: 1;
   width: 100%;
@@ -256,7 +256,7 @@ body.dark .floating-card {
   color: #94a3b8;
 }
 
-/* 6. Animations & Responsiveness */
+/* Animations & Responsiveness */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }

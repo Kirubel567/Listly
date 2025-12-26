@@ -1,4 +1,4 @@
-/* ===== MAIN CONTENT STYLES ===== */
+/*  MAIN CONTENT STYLES  */
 
 /* Main Content Container */
 .main-content {
@@ -27,7 +27,7 @@ body.dark .main-content {
   padding-bottom: 5rem;
 }
 
-/* ===== HEADER SECTION STYLES ===== */
+/* HEADER SECTION STYLES */
 
 /* Header Section */
 .header-section {
@@ -114,7 +114,7 @@ body.dark .more-btn:hover {
   background-color: rgba(19, 91, 236, 0.1);
 }
 
-/* ===== ADD TASK FORM STYLES ===== */
+/* ADD TASK FORM STYLES */
 
 /* Container for add task form */
 .add-task-container {
@@ -123,7 +123,6 @@ body.dark .more-btn:hover {
   z-index: 10;
 }
 
-/* Responsive padding for larger screens */
 @media (min-width: 640px) {
   .add-task-container {
     padding: 0 3rem 2rem;
@@ -207,9 +206,6 @@ body.dark .add-task-input::placeholder {
 .add-task-btn:hover {
   background-color: rgba(19, 91, 236, 0.9);
 }
-
-/* ===== TASKS SECTION STYLES ===== */
-
 /* Tasks Section Container */
 .tasks-section {
   padding: 0 2rem 2rem;
@@ -333,8 +329,6 @@ body.dark .task-card:hover {
   font-size: 1.125rem;
 }
 
-/* ===== TASK CHECKBOX STYLES ===== */
-
 /* Custom checkbox styling */
 .task-checkbox {
   appearance: none;
@@ -353,7 +347,6 @@ body.dark .task-card:hover {
   flex-shrink: 0;
 }
 
-/* Checkmark (hidden by default) */
 .task-checkbox::before {
   content: "";
   width: 0.65em;
@@ -382,7 +375,7 @@ body.dark .task-card:hover {
   color: #9ca3af;
 }
 
-/* ===== TASK CONTENT STYLES ===== */
+/*  TASK CONTENT STYLES  */
 
 /* Task Content Container */
 .task-content {
@@ -448,9 +441,6 @@ body.dark .task-time {
 .task-time .material-symbols-outlined {
   font-size: 0.875rem;
 }
-
-/* ===== TASK ACTIONS STYLES ===== */
-
 /* Task Actions Container */
 .task-actions {
   opacity: 0;
@@ -511,8 +501,6 @@ body.dark .delete-btn:hover {
   font-size: 1.125rem;
 }
 
-/* ===== PRIORITY TASK STYLES ===== */
-
 /* Priority Task Card */
 .task-card.priority {
   border-left: 4px solid var(--primary-color);
@@ -530,9 +518,6 @@ body.dark .delete-btn:hover {
 .task-priority .material-symbols-outlined {
   font-size: 0.875rem;
 }
-
-/* ===== EMPTY STATE STYLES ===== */
-
 /* Empty Illustration */
 .empty-illustration {
   height: 6rem;

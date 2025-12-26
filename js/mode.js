@@ -1,5 +1,4 @@
-const themeToggle = document.querySelector(".fa-moon"); // Your moon icon
-
+const themeToggle = document.querySelector(".fa-moon"); 
 function initTheme() {
   const savedTheme = localStorage.getItem("theme") || "light";
   if (savedTheme === "dark") {
@@ -7,7 +6,6 @@ function initTheme() {
     themeToggle.classList.replace("fa-moon", "fa-sun");
   }
 }
-
 themeToggle.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark");
   localStorage.setItem("theme", isDark ? "dark" : "light");

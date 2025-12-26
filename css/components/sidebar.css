@@ -1,4 +1,3 @@
-/* ===== SIDEBAR STYLES ===== */
 .sidebar {
     width: 256px;
     background-color: var(--surface-light);
@@ -42,8 +41,6 @@ body.dark .sidebar {
 body.dark .sidebar-section-title {
     color: var(--text-secondary-dark);
 }
-
-/* ===== FILTERS SECTION ===== */
 .filters-nav {
     display: flex;
     flex-direction: column;
@@ -106,7 +103,6 @@ body.dark .filter-link.active {
     color: var(--primary-color);
 }
 
-/* ===== LISTS SECTION ===== */
 .lists-header {
     display: flex;
     align-items: center;
@@ -211,7 +207,7 @@ body.dark .list-count {
     color: var(--text-secondary-dark);
 }
 
-/* ===== SIDEBAR FOOTER ===== */
+
 .sidebar-footer {
     padding: 1rem;
     border-top: 1px solid var(--border-light);

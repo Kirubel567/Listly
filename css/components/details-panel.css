@@ -1,4 +1,4 @@
-/* ===== DETAILS PANEL STYLES ===== */
+/*  DETAILS PANEL STYLES  */
 .details-panel {
   width: 400px;
   background-color: var(--surface-light);
@@ -16,7 +16,7 @@ body.dark .details-panel {
   border-color: var(--border-dark);
 }
 
-/* ===== PANEL HEADER ===== */
+/*  PANEL HEADER */
 .panel-header {
   padding: 1.5rem;
   border-bottom: 1px solid #f3f4f6;
@@ -97,7 +97,7 @@ body.dark .panel-action-btn:hover {
   gap: 1.5rem;
 }
 
-/* ===== TASK TITLE EDIT ===== */
+/*  TASK TITLE EDIT  */
 .task-title-edit {
   display: flex;
   gap: 1rem;
@@ -166,7 +166,7 @@ body.dark .title-input {
   box-shadow: none;
 }
 
-/* ===== QUICK ACTIONS ===== */
+/*  QUICK ACTIONS  */
 .quick-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -219,7 +219,7 @@ body.dark .quick-action-btn.full-width .material-symbols-outlined {
   color: var(--text-secondary-dark);
 }
 
-/* ===== PANEL FOOTER ===== */
+/* PANEL FOOTER */
 .panel-footer {
   padding: 1rem;
   border-top: 1px solid var(--border-light);
@@ -241,7 +241,6 @@ body.dark .footer-text {
   color: var(--text-secondary-dark);
 }
 
-/* You can change this hex code to your preferred brand color */
 :root {
   --primary-color: #3b82f6;
 }
@@ -259,7 +258,7 @@ body.dark .footer-text {
 }
 
 .icon-gray {
-  color: #9ca3af; /* text-gray-400 */
+  color: #9ca3af; 
 }
 
 .notes-textarea {
@@ -267,40 +266,34 @@ body.dark .footer-text {
   outline: none;
   border: none;
   width: 100%;
-  padding: 0.75rem; /* p-3 */
-  font-size: 0.875rem; /* text-sm */
+  padding: 0.75rem; 
+  font-size: 0.875rem; 
   line-height: 1.25rem;
-  border-radius: 0.5rem; /* rounded-lg */
-  resize: none; /* resize-none */
+  border-radius: 0.5rem; 
+  resize: none; 
   outline: none;
 
   /* Light Mode Colors */
-  background-color: #f9fafb; /* bg-gray-50 */
-  border: 1px solid #e5e7eb; /* border border-gray-200 */
-  color: #374151; /* text-gray-700 */
+  background-color: #f9fafb; 
+  border: 1px solid #e5e7eb; 
+  color: #374151;
 }
 
 .notes-textarea::placeholder {
-  color: #9ca3af; /* placeholder-gray-400 */
+  color: #9ca3af;
 }
-
-/* Focus States */
-/* .notes-textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 1px var(--primary-color); /* focus:ring-1 */
-
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .notes-textarea {
-    background-color: rgba(31, 41, 55, 0.5); /* dark:bg-gray-800/50 */
-    border-color: #374151; /* dark:border-gray-700 */
-    color: #d1d5db; /* dark:text-gray-300 */
+    background-color: rgba(31, 41, 55, 0.5); 
+    border-color: #374151; 
+    color: #d1d5db; 
   }
 }
 
 
 :root {
-  --primary-color: #3b82f6; /* Adjust this to match your theme's primary color */
+  --primary-color: #3b82f6; 
 }
 
 /* Outer Container */
@@ -309,38 +302,36 @@ body.dark .footer-text {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem; /* p-6 */
-  border-bottom: 1px solid #f3f4f6; /* border-b border-gray-100 */
+  border-bottom: 1px solid #f3f4f6; 
 }
 
 /* Left Section Styles */
 .folder-info {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* gap-2 */
-  font-size: 0.75rem; /* text-xs */
-  color: #9ca3af; /* text-gray-400 */
-  text-transform: uppercase; /* uppercase */
-  font-weight: 600; /* font-semibold */
-  letter-spacing: 0.05em; /* tracking-wider */
+  gap: 0.5rem; 
+  font-size: 0.75rem;
+  color: #9ca3af; 
+ text-transform: uppercase; 
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
-
 .icon-folder {
-  font-size: 0.875rem; /* text-sm */
+  font-size: 0.875rem; 
 }
 
 /* Right Section Styles */
 .action-group {
   display: flex;
-  gap: 0.25rem; /* gap-1 */
+  gap: 0.25rem; 
 }
-
 .btn-action {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem; /* p-2 */
-  border-radius: 0.5rem; /* rounded-lg */
-  color: #9ca3af; /* text-gray-400 */
+  padding: 0.5rem; 
+  border-radius: 0.5rem; 
+  color: #9ca3af; 
   background: transparent;
   border: none;
   cursor: pointer;
@@ -350,25 +341,25 @@ body.dark .footer-text {
 }
 
 .btn-action:hover {
-  background-color: #f3f4f6; /* hover:bg-gray-100 */
+  background-color: #f3f4f6; 
 }
 
 .btn-delete:hover {
-  color: #ef4444; /* hover:text-red-500 */
+  color: #ef4444; 
 }
 
 .btn-close:hover {
-  color: var(--primary-color); /* hover:text-primary */
+  color: var(--primary-color); 
 }
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .header-container {
-    border-color: #1f2937; /* dark:border-gray-800 */
+    border-color: #1f2937; 
   }
 
   .btn-action:hover {
-    background-color: #1f2937; /* dark:hover:bg-gray-800 */
+    background-color: #1f2937; 
   }
 }
 
@@ -430,7 +421,6 @@ body.dark .deadline-input {
   font-size: 0.875rem;
 }
 
-/* Container styling to match the section layout */
 .notes-container {
   margin-top: 1.5rem;
   display: flex;
@@ -445,12 +435,12 @@ body.dark .deadline-input {
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-secondary-light); /* Adjust based on your variables */
+  color: var(--text-secondary-light);
 }
 
 /* The Tag Input field itself */
 .tag-input.notes-textarea {
-  border: 1px solid transparent; /* Keeps it clean until focus */
+  border: 1px solid transparent; 
   background: transparent;
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
@@ -487,7 +477,7 @@ body.dark .tag-input.notes-textarea:focus {
 .search-group {
   position: relative;
   width: 100%;
-  max-width: 300px; /* Adjust based on your header size */
+  max-width: 300px; 
 }
 
 .search-icon-wrapper {
@@ -503,19 +493,19 @@ body.dark .tag-input.notes-textarea:focus {
 }
 
 .search-icon {
-  color: #9ca3af; /* text-gray-400 */
+  color: #9ca3af; 
   font-size: 20px;
 }
 
 .search-input {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.75rem 0.5rem 2.5rem; /* pl-10 */
+  padding: 0.5rem 0.75rem 0.5rem 2.5rem;
   border: none;
-  border-radius: 0.5rem; /* rounded-lg */
+  border-radius: 0.5rem;
   line-height: 1.25rem;
-  background-color: #f3f4f6; /* bg-gray-100 */
-  color: #0f172a; /* text-slate-900 */
+  background-color: #f3f4f6; 
+  color: #0f172a; 
   transition: all 150ms ease-in-out;
   outline: none;
 }
@@ -529,11 +519,12 @@ body.dark .tag-input.notes-textarea:focus {
   background-color: #ffffff;
 }
 
-/* --- Dark Mode Support --- */
+/* --- Dark Mode --- */
 body.dark .search-input {
   background-color: #1f2937; 
   color: #f3f4f6; 
 }
+
 body.dark .search-input:focus {
   background-color: #111827;
 }

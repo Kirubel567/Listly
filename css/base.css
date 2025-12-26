@@ -1,4 +1,4 @@
-/* ===== CSS RESET & BASE STYLES ===== */
+/*  CSS RESET & BASE STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,6 @@ body.dark {
     color: var(--text-dark);
 }
 
-/* Utility Classes */
 .hidden {
     display: none !important;
 }
