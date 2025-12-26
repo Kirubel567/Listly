@@ -231,3 +231,27 @@ titleInput.addEventListener("blur", saveChanges);
 noteInput.addEventListener("blur", saveChanges);
 deadlineInput.addEventListener("change", saveChanges);
 categoryInput.addEventListener("blur", saveChanges);
+
+//search feature
+const searchInput = document.querySelector("#taskSearch");
+
+searchInput.addEventListener("input", async (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+
+  try {
+    // Fetch the tasks from your API
+    const allTasks = await apiCalls.getTasks();
+
+    // Filter based on Title or Category
+    const filteredTasks = allTasks.filter((task) => {
+      const title = task.title.toLowerCase();
+      const category = (task.category || "").toLowerCase();
+      return title.includes(searchTerm) || category.includes(searchTerm);
+    });
+
+    // Use your existing render function to show only matches
+    render(filteredTasks);
+  } catch (err) {
+    console.error("Search failed", err);
+  }
+});

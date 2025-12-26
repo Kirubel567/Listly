@@ -490,3 +490,57 @@ body.dark .tag-input.notes-textarea:focus {
   background-color: rgba(255, 255, 255, 0.05);
   border-color: #334155;
 }
+.search-group {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Adjust based on your header size */
+}
+
+.search-icon-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 0.75rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.search-icon {
+  color: #9ca3af; /* text-gray-400 */
+  font-size: 20px;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 2.5rem; /* pl-10 */
+  border: none;
+  border-radius: 0.5rem; /* rounded-lg */
+  line-height: 1.25rem;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  color: #0f172a; /* text-slate-900 */
+  transition: all 150ms ease-in-out;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #6b7280; 
+}
+
+.search-input:focus {
+  ring: 2px solid rgba(19, 91, 236, 0.5); 
+  background-color: #ffffff;
+}
+
+/* --- Dark Mode Support --- */
+body.dark .search-input {
+  background-color: #1f2937; 
+  color: #f3f4f6; 
+}
+
+body.dark .search-input:focus {
+  background-color: #111827;
+}

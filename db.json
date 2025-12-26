@@ -35,6 +35,15 @@
       "dueDate": "2026-01-07",
       "completed": false,
       "createdAt": "2025-12-26T01:59:13.895Z"
+    },
+    {
+      "id": "5676",
+      "title": "mania",
+      "description": "",
+      "category": "Work",
+      "dueDate": "12/26/2025",
+      "completed": false,
+      "createdAt": "2025-12-26T02:08:17.130Z"
     }
   ]
 }
